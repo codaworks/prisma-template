@@ -1,0 +1,6 @@
+@layer tailwind-base {
+    @tailwind base;
+}
+
+@layer base {
+}

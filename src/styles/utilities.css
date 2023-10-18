@@ -1,0 +1,6 @@
+@layer tailwind-utilities {
+    @tailwind utilities;
+}
+
+@layer utilities {
+}
