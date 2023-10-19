@@ -1,7 +1,7 @@
 const consumes = schema => async (ctx, next) => {
     if (ctx.request.body) {
         try {
-            ctx.request.body = await schema.validateAsync(ctx.request.body)
+            ctx.request.body = schema.parse(ctx.request.body)
         } catch (e) {
             e.status = 400
             throw e
@@ -19,7 +19,7 @@ const returns = schema => async (ctx, next) => {
         ctx.response.body = body
     }
 
-    await schema.validateAsync(body)
+    schema.parse(body)
 }
 
 module.exports = {
