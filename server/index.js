@@ -13,5 +13,5 @@ app.use(errorHandler())
 if (process.env.NODE_ENV === 'serverless') {
     module.exports = app
 } else {
-    app.listen(3000)
+    app.listen(8080)
 }
