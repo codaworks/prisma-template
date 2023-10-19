@@ -1,10 +1,9 @@
 {
   "name": "tavla-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "BAckend for Tavla flyer generation software",
   "main": "index.js",
   "author": "Mordechai Meisels",
-  "license": "ISC",
   "dependencies": {
     "@koa/router": "^11.0.2",
     "@prisma/client": "^5.4.2",
