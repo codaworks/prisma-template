@@ -1,21 +1,20 @@
 {
-  "name": "next-template",
+  "name": "prisma-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "generate": " prisma generate",
-    "postinstall": "prisma generate",
+    "migrate": "npx dotenv -e .env.local -- prisma migrate dev",
+    "generate": "npx dotenv -e .env.local -- prisma generate",
+    "postinstall": "npm run generate",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@prisma/client": "^5.4.2",
-    "bcryptjs": "^2.4.3",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
-    "koa": "^2.14.2",
     "next": "^13",
     "next-plugin-svgr": "^1.1.8",
     "react": "^18",
@@ -25,8 +24,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.5",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "postcss": "^8",
     "prisma": "^5.4.2",
     "tailwindcss": "^3"
